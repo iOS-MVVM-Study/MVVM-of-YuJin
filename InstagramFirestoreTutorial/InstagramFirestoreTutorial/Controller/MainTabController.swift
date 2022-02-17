@@ -20,13 +20,36 @@ class MainTabController: UITabBarController {
     
     func configViewControllers() {
         view.backgroundColor = .white
-
-        let feed = FeedController()
-        let search = SearchController()
-        let imageSelector = ImageSelectorController()
-        let notifications = NotificationsController()
-        let profile = ProfileController()
+        
+        let feed = templateNavigationController(unselectedImage: ImageLiterals.icHomeUnselected,
+                                                selectedImage: ImageLiterals.icHomeSelected,
+                                                rootViewController: FeedController())
+        
+        let search = templateNavigationController(unselectedImage: ImageLiterals.icSearchSelected,
+                                                  selectedImage: ImageLiterals.icSearchSelected,
+                                                  rootViewController: SearchController())
+        
+        let imageSelector = templateNavigationController(unselectedImage: ImageLiterals.icPlusUnselected,
+                                                         selectedImage: ImageLiterals.icPlusUnselected,
+                                                         rootViewController: ImageSelectorController())
+        
+        let notifications = templateNavigationController(unselectedImage: ImageLiterals.icLikeUnselected,
+                                                        selectedImage: ImageLiterals.icLikeSelected,
+                                                        rootViewController: NotificationsController())
+        
+        let profile = templateNavigationController(unselectedImage: ImageLiterals.icProfileUnselected,
+                                                   selectedImage: ImageLiterals.icProfileSelected,
+                                                   rootViewController: ProfileController())
         
         viewControllers = [feed, search, imageSelector, notifications, profile]
+        tabBar.tintColor = .black
+    }
+    
+    func templateNavigationController(unselectedImage: UIImage, selectedImage: UIImage, rootViewController: UIViewController) -> UINavigationController {
+        let nav = UINavigationController(rootViewController: rootViewController)
+        nav.tabBarItem.image = unselectedImage
+        nav.tabBarItem.selectedImage = selectedImage
+        nav.navigationBar.tintColor = .black
+        return nav
     }
 }

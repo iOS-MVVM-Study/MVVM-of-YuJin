@@ -19,6 +19,7 @@
 		6AB777CC27BE64790072AA8E /* ImageSelectorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB777CB27BE64790072AA8E /* ImageSelectorController.swift */; };
 		6AB777CE27BE64880072AA8E /* NotificationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB777CD27BE64880072AA8E /* NotificationsController.swift */; };
 		6AB777D027BE64940072AA8E /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB777CF27BE64940072AA8E /* ProfileController.swift */; };
+		6AB777D227BE6C9B0072AA8E /* Literal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB777D127BE6C9B0072AA8E /* Literal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		6AB777CB27BE64790072AA8E /* ImageSelectorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSelectorController.swift; sourceTree = "<group>"; };
 		6AB777CD27BE64880072AA8E /* NotificationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsController.swift; sourceTree = "<group>"; };
 		6AB777CF27BE64940072AA8E /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
+		6AB777D127BE6C9B0072AA8E /* Literal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Literal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 		6AB777BF27BE5DE90072AA8E /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				6AB777D127BE6C9B0072AA8E /* Literal.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -211,6 +214,7 @@
 				6AB777AC27BE5DCD0072AA8E /* AppDelegate.swift in Sources */,
 				6AB777D027BE64940072AA8E /* ProfileController.swift in Sources */,
 				6AB777C827BE645B0072AA8E /* FeedController.swift in Sources */,
+				6AB777D227BE6C9B0072AA8E /* Literal.swift in Sources */,
 				6AB777C627BE5FDD0072AA8E /* MainTabController.swift in Sources */,
 				6AB777AE27BE5DCD0072AA8E /* SceneDelegate.swift in Sources */,
 			);
