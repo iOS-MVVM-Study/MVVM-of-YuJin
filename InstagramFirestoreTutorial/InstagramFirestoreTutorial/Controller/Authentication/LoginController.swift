@@ -15,6 +15,7 @@ import UIKit
 class LoginController: UIViewController{
 
     //MARK: - Properties
+    private var viewModel = LoginViewModel()
     
     private let iconImage: UIImageView = {
         let imageView = UIImageView(image: ImageLiterals.instagramLogoWhite)
@@ -38,14 +39,14 @@ class LoginController: UIViewController{
         let button = UIButton(type: .system)
         button.setTitle("Log In", for: .normal)
         button.setTitleColor(.white, for: .normal)
-        button.backgroundColor = .systemIndigo
+        button.backgroundColor = .systemIndigo.withAlphaComponent(0.5)
         button.layer.cornerRadius = 5
         button.setHeight(50) // stack view에 넣을 때 크기
         button.titleLabel?.font = .systemFont(ofSize: 20, weight: .bold)
         return button
     }()
     
-    private let dontHaveAccountButton: UIButton = {
+    private lazy var dontHaveAccountButton: UIButton = {
         let button = UIButton(type: .system)
         button.attributedTitle(firstPart: "Don't have an account?  ", secondPart: "Sign Up")
         button.addTarget(self, action: #selector(handleShowSignUp), for: .touchUpInside)
@@ -63,6 +64,7 @@ class LoginController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
+        configureNotificationObservers()
     }
 
     //MARK: - Actions
@@ -71,6 +73,17 @@ class LoginController: UIViewController{
         let controller = RegistrationController()
         navigationController?.pushViewController(controller, animated: true)
     }
+    @objc private func textDidChange(sender: UITextField){
+           if sender == emailTextField{
+               viewModel.email = sender.text
+           }else{
+               viewModel.password = sender.text
+           }
+        
+        updateForm()
+
+       }
+
     //MARK: Helpers
     
     func configureUI(){
@@ -113,4 +126,17 @@ class LoginController: UIViewController{
         dontHaveAccountButton.centerX(inView: view)
         dontHaveAccountButton.anchor(bottom: view.safeAreaLayoutGuide.bottomAnchor)
     }
-} 
+    
+    func configureNotificationObservers(){
+           emailTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+           passwordTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+       }
+
+}
+extension LoginController: FormViewModel{
+    func updateForm() {
+        loginButton.backgroundColor = viewModel.buttonBackGroundColor
+        loginButton.setTitleColor(viewModel.buttonTitleColor, for: .normal)
+        loginButton.isEnabled = viewModel.formIsValid
+    }
+}
