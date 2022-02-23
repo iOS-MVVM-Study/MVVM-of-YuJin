@@ -24,6 +24,7 @@
 		6AB777D627BE74220072AA8E /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB777D527BE74220072AA8E /* Extension.swift */; };
 		6AC4578627C6BEEB000BFA0A /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC4578527C6BEEB000BFA0A /* LoginController.swift */; };
 		6AC4578827C6BF04000BFA0A /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC4578727C6BF04000BFA0A /* RegistrationController.swift */; };
+		6AC4578A27C6C4F7000BFA0A /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC4578927C6C4F7000BFA0A /* CustomTextField.swift */; };
 		7B4323E20CD706FF887CDE1A /* Pods_InstagramFirestoreTutorial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCD66E9833C2B62A11A6AD4F /* Pods_InstagramFirestoreTutorial.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +50,7 @@
 		6AB777D527BE74220072AA8E /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		6AC4578527C6BEEB000BFA0A /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		6AC4578727C6BF04000BFA0A /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
+		6AC4578927C6C4F7000BFA0A /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		BCD66E9833C2B62A11A6AD4F /* Pods_InstagramFirestoreTutorial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstagramFirestoreTutorial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -153,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				6AB777D327BE72850072AA8E /* FeedCell.swift */,
+				6AC4578927C6C4F7000BFA0A /* CustomTextField.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 				6AB777D227BE6C9B0072AA8E /* Literal.swift in Sources */,
 				6AB777C627BE5FDD0072AA8E /* MainTabController.swift in Sources */,
 				6AB777AE27BE5DCD0072AA8E /* SceneDelegate.swift in Sources */,
+				6AC4578A27C6C4F7000BFA0A /* CustomTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
