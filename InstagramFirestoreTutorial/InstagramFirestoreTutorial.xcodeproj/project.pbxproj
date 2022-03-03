@@ -26,6 +26,7 @@
 		6AC4578827C6BF04000BFA0A /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC4578727C6BF04000BFA0A /* RegistrationController.swift */; };
 		6AC4578A27C6C4F7000BFA0A /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC4578927C6C4F7000BFA0A /* CustomTextField.swift */; };
 		6AC4578C27C6CB0C000BFA0A /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC4578B27C6CB0C000BFA0A /* AuthenticationViewModel.swift */; };
+		6AC4578E27D0BA17000BFA0A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6AC4578D27D0BA17000BFA0A /* GoogleService-Info.plist */; };
 		7B4323E20CD706FF887CDE1A /* Pods_InstagramFirestoreTutorial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCD66E9833C2B62A11A6AD4F /* Pods_InstagramFirestoreTutorial.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +54,7 @@
 		6AC4578727C6BF04000BFA0A /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
 		6AC4578927C6C4F7000BFA0A /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		6AC4578B27C6CB0C000BFA0A /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
+		6AC4578D27D0BA17000BFA0A /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		BCD66E9833C2B62A11A6AD4F /* Pods_InstagramFirestoreTutorial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstagramFirestoreTutorial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -119,6 +121,7 @@
 				6AB777B427BE5DCF0072AA8E /* Assets.xcassets */,
 				6AB777B627BE5DCF0072AA8E /* LaunchScreen.storyboard */,
 				6AB777B927BE5DCF0072AA8E /* Info.plist */,
+				6AC4578D27D0BA17000BFA0A /* GoogleService-Info.plist */,
 			);
 			path = InstagramFirestoreTutorial;
 			sourceTree = "<group>";
@@ -247,6 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6AB777B827BE5DCF0072AA8E /* LaunchScreen.storyboard in Resources */,
+				6AC4578E27D0BA17000BFA0A /* GoogleService-Info.plist in Resources */,
 				6AB777B527BE5DCF0072AA8E /* Assets.xcassets in Resources */,
 				6AB777B327BE5DCD0072AA8E /* Main.storyboard in Resources */,
 			);
