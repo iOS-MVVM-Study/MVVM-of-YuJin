@@ -81,7 +81,7 @@ class RegistrationController: UIViewController{
                 return
             }
             
-            print("DEBUG: Successfully registered user with firestore..")
+            self.dismiss(animated: true, completion: nil)
         }
         
     }
