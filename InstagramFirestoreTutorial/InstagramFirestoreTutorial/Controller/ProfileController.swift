@@ -13,12 +13,25 @@ private let headerIdentifier = "ProfileHeader"
 class ProfileController: UICollectionViewController{
     
     // MARK: - Properties
-    
+    var user: User? {
+        didSet { navigationItem.title = user?.userName }
+        
+    }
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureCollectionView()
+        fetchUser()
+    }
+    
+    //MARK: - API
+    
+    func fetchUser() {
+        UserService.fetchUser{ user in
+            self.user = user
+            self.navigationItem.title = user.userName
+        }
     }
     
     // MARK: - Helpers
@@ -73,7 +86,7 @@ extension ProfileController: UICollectionViewDelegateFlowLayout {
         let width = (view.frame.width - 2) / 3
         return CGSize(width: width, height: width)
     }
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         return CGSize(width: view.frame.width,  height: 240)
     }
 }

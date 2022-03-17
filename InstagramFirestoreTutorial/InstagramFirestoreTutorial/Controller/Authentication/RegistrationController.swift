@@ -70,10 +70,10 @@ class RegistrationController: UIViewController{
         guard let email = emailTextField.text else { return }
         guard let password = passwordTextField.text else { return }
         guard let fullname = fullNameTextField.text else { return }
-        guard let username = userNameTextField.text?.lowercased() else { return }
+        guard let userName = userNameTextField.text?.lowercased() else { return }
         guard let profileImage = self.profileImage else { return }
         
-        let credentials = AuthCredentials(email: email, password: password, fullName: fullname, userName: username, profileImage: profileImage)
+        let credentials = AuthCredentials(email: email, password: password, fullName: fullname, userName: userName, profileImage: profileImage)
         
         AuthService.registerUser(withCredential: credentials) { error in
             if let error = error {
