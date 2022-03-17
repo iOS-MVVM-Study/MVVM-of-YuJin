@@ -14,7 +14,7 @@ class ProfileController: UICollectionViewController{
     
     // MARK: - Properties
     var user: User? {
-        didSet { navigationItem.title = user?.userName }
+        didSet { collectionView.reloadData() }
         
     }
     // MARK: - Lifecycle
@@ -57,8 +57,14 @@ extension ProfileController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerIdentifier, for: indexPath)
-        
+        let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerIdentifier, for: indexPath) as! ProfileHeader
+        print("DEBUG: Did call header function")
+        if let user = user {
+            header.viewModel = ProfileHeaderViewModel(user: user)
+        }else{
+            print("DEBUG: User not yet set ..")
+        }
+       
         return header
     }
 
